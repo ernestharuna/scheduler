@@ -1,0 +1,31 @@
+section {
+   margin: 0 auto;
+   width: 80vw;
+   background-color: white;
+} 
+
+.input-container {
+   width: 100%;
+}
+
+.my-input {
+   display: inline-block;
+   width: 100%;
+   margin-bottom: 20px;
+   height: 50px;
+   border-radius: 30px;
+   padding: 20px;
+   border: none;
+   background: rgb(240, 239, 239);
+   font-weight: 700;
+}
+
+.my-button {
+   border-radius: 30px;
+   padding: 10px;
+   width: 100%;
+   transition: .3s;
+}
+.my-button:hover {
+   transform: scale(1.03, 1.03);
+}

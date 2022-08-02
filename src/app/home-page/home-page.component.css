@@ -1,0 +1,11 @@
+#bg-img {
+   background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0.8)), url("/assets/ATF-img.webp");
+   background-color: #cccccc;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+}
+
+/* video{
+   background: (rgba(0,0,0,0.3), rgba(0,0,0.8));
+} */
