@@ -47,7 +47,7 @@ export class BlankComponent implements OnInit {
   editRecord(e: any) {
     // this.name.setValue('');
     // console.log(this.records);
-    console.log(TableRecord.find(this.editRecord));
+    // console.log(TableRecord.find(this.editRecord));
   }
 
 }
