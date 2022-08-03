@@ -1,6 +1,7 @@
 import { TableRecord } from './record';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { findIndex } from 'rxjs';
 
 @Component({
   selector: 'app-blank',
@@ -9,6 +10,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class BlankComponent implements OnInit {
   records: TableRecord[] = [];
+  editableRecordIndex?: number;
 
   // formData: TableRecord = {
   //   country: '',
@@ -20,9 +22,9 @@ export class BlankComponent implements OnInit {
   // company = '';
 
   dataForm = new FormGroup({
-    country: new FormControl(null, [Validators.required]),
-    contact: new FormControl(null, [Validators.required]),
-    company: new FormControl(null, [Validators.required]),
+    country: new FormControl('', [Validators.required]),
+    contact: new FormControl('', [Validators.required]),
+    company: new FormControl('', [Validators.required]),
   });
   name: any;
 
@@ -32,7 +34,7 @@ export class BlankComponent implements OnInit {
   }
 
   saveRecord() {
-    console.log(this.dataForm.value);
+    // console.log(this.dataForm.value);
 
     const formData = this.dataForm.value;
     const record: TableRecord = {
@@ -40,14 +42,41 @@ export class BlankComponent implements OnInit {
       contact: formData.contact ?? '',
       country: formData.country ?? ''
     };
+    
+    // this.records[index].company = this.dataForm.controls['company'].value;
 
-    this.records.push(record);
+    if (this.editableRecordIndex !== undefined) {
+      // Update
+
+      this.records.splice(this.editableRecordIndex, 1, record);
+      this.editableRecordIndex = undefined;
+    } else {
+      // Insert
+
+      this.records.push(record);
+    }
+
+    
+    this.dataForm.reset();
   }
 
-  editRecord(e: any) {
+  editRecord(index: number) {
+    const record = this.records[index];
+    this.editableRecordIndex = index;
+
+    this.dataForm.setValue({
+      country: record.country,
+      company: record.company,
+      contact: record.contact,
+    });
+
+    // this.records.[record].value = this.dataForm;
+
+    // console.log(record);
+    // [findIndex] = TableRecord(1)
     // this.name.setValue('');
     // console.log(this.records);
-    console.log(TableRecord.find(this.editRecord));
+    // console.log(TableRecord.find(this.editRecord));
   }
 
 }

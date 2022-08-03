@@ -1,3 +1,4 @@
+import { PaymentComponent } from './payment/payment.component';
 import { SchedulerComponent } from './scheduler/scheduler.component';
 import { ListComponent } from './admin-layout/list/list.component';
 import { UsersProfileComponent } from './admin-layout/users-profile/users-profile.component';
@@ -10,7 +11,6 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { BlankComponent } from './blank/blank.component';
 
 const routes: Routes = [
-<<<<<<< HEAD
 { 
   path: '', pathMatch: 'full', component: HomePageComponent 
 },
@@ -20,15 +20,7 @@ const routes: Routes = [
 {
    path: 'login-page', component: LoginPageComponent
 },
-{
-   path: 'list', component: ListComponent
-},
-{
-   path: 'blank', component: BlankComponent
-},
-{
-   path: 'scheduler', component: SchedulerComponent
-},
+
 {
    path: 'admin-layout', component: AdminLayoutComponent,
    children: [
@@ -37,23 +29,24 @@ const routes: Routes = [
          component: DashboardComponent
       },
       {
-         path: 'users-profile',
+         path: 'user-profile',
          component: UsersProfileComponent
-      }
+      },
+      {
+         path: 'schedule-table', component: SchedulerComponent
+      },
+      {
+         path: 'list', component: ListComponent
+      },
+      {
+         path: 'blank', component: BlankComponent
+      },
+      {
+         path: 'payment', component: PaymentComponent
+      },
    ]
 },
 
-=======
-   { path: '', pathMatch: 'full', component: HomePageComponent },
-   { path: 'home', component: HomePageComponent },
-   { path: 'login-page', component: LoginPageComponent },
-   { path: 'admin-layout', component: AdminLayoutComponent,
-      children: [
-         { path: 'dashboard', component: DashboardComponent },
-         { path: 'users-profile', component: UsersProfileComponent }
-      ]
-   }
->>>>>>> 778a70ac85c8616cff730028242b27d6fdc8ac75
 ];
 
 @NgModule({

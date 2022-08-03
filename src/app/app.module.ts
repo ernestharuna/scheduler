@@ -16,6 +16,7 @@ import { ListComponent } from './admin-layout/list/list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BlankComponent } from './blank/blank.component';
 import { SchedulerComponent } from './scheduler/scheduler.component';
+import { PaymentComponent } from './payment/payment.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { SchedulerComponent } from './scheduler/scheduler.component';
     UsersProfileComponent,
     ListComponent,
     BlankComponent,
-    SchedulerComponent
+    SchedulerComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
