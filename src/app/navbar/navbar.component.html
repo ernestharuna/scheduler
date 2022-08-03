@@ -1,42 +1,39 @@
-
 <header>
-   <nav class="navbar navbar-expand-md bg-success navbar-dark py-3">
-     <div class="container">
-       <a href="#" class="navbar-brand fs-1 fw-bold">
-        <img src="/assets/ABCIN.png" class="logo">
-       </a>
- 
-       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-         <span class="navbar-toggler-icon">.
-         </span>
-       </button>
- 
-       <div class="collapse navbar-collapse" id="navmenu">
-         <ul class="navbar-nav ms-auto fs-5">
+  <nav class="navbar navbar-expand-md bg-success navbar-dark py-3">
+    <div class="container">
+      <a href="#" class="navbar-brand fs-1 fw-bold">
+        <img alt="logo" src="/assets/ABCIN.png" class="logo">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon">.
+        </span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto fs-5">
           <li class="nav-item">
-            <a routerLink="/dashboard" class="nav-link mx-4">Home</a>
+            <a routerLink="/home" class="nav-link mx-2">Home</a>
           </li>
           <li class="nav-item">
-            <a routerLink="/department" class="nav-link mx-4">About</a>
+            <a href="#about" class="nav-link mx-2">About</a>
           </li>
           <li class="nav-item">
-            <a routerLink="/edit" class="nav-link mx-4" >Gallery</a>
+            <a href="#gallery" class="nav-link mx-2">Gallery</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link mx-2">See matches <i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-content">
+              <a href="#">Match 1</a>
+              <a href="#">Match 2</a>
+              <a href="#">Match 3</a>
+            </div>
           </li>
           <li class="nav-item">
-            <a routerLink="/edit" class="nav-link mx-4" >See matches
-              <select>
-                <option></option>
-                <option>hi</option>
-                <option>hello</option>
-              </select>
-            </a>
+            <a routerLink="login-page" class="nav-link mx-2">Sign in</a>
           </li>
-           <li class="nav-item">
-             <a routerLink="/edit" class="nav-link mx-4" >SIGN UP</a>
-           </li>
-         </ul>
-       </div>
-     </div>
-   </nav>
- </header>
- 
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
