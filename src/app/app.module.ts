@@ -11,6 +11,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ScheduleTableComponent } from './schedule-table/schedule-table.component';
 import { FooterComponent } from './footer/footer.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { UsersProfileComponent } from './users-profile/users-profile.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { FooterComponent } from './footer/footer.component';
     SidebarComponent,
     NavbarComponent,
     ScheduleTableComponent,
-    FooterComponent
+    FooterComponent,
+    DashboardComponent,
+    UsersProfileComponent
   ],
   imports: [
     BrowserModule,
