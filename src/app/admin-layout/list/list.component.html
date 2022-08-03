@@ -1,0 +1,40 @@
+<div class="player-data">
+    <form>
+        <input type="text" name="text" id="txt" [(ngModel)]="value" required>
+        <input type="text" name="text" id="txt" [(ngModel)]="value" required>
+        <input type="text" name="text" id="txt" [(ngModel)]="value" required>
+        <button type="button" class="btn-list" (click)="playerData()">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+        </button>
+    </form>
+
+    <table>
+        <tr>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+        </tr>
+        <tr>
+          <td>Centro comercial Moctezuma</td>
+          <td>Francisco Chang</td>
+          <td>Mexico</td>
+        </tr>
+      </table>
+    <div>
+        value: {{ value }}
+    </div>
+    
+    <div class="container">
+        <ul>
+            <li>Hello World<span>+</span></li>
+            <li>Hello World<span>+</span></li>
+            <li>Hello World<span>+</span></li>
+            <li>Hello World<span>+</span></li>
+        </ul>
+    </div>
+</div>
