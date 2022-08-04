@@ -1,4 +1,4 @@
-import { PaymentComponent } from './payment/payment.component';
+
 import { SchedulerComponent } from './scheduler/scheduler.component';
 import { ListComponent } from './admin-layout/list/list.component';
 import { UsersProfileComponent } from './admin-layout/users-profile/users-profile.component';
@@ -9,6 +9,7 @@ import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { BlankComponent } from './blank/blank.component';
+import { PaymentComponent } from './admin-layout/payment/payment.component';
 
 const routes: Routes = [
 { 

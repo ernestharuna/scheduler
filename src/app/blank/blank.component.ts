@@ -1,7 +1,7 @@
 import { TableRecord } from './record';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { findIndex } from 'rxjs';
+// import { findIndex } from 'rxjs';
 
 @Component({
   selector: 'app-blank',
@@ -11,15 +11,6 @@ import { findIndex } from 'rxjs';
 export class BlankComponent implements OnInit {
   records: TableRecord[] = [];
   editableRecordIndex?: number;
-
-  // formData: TableRecord = {
-  //   country: '',
-  //   contact: '',
-  //   company: '',
-  // };
-  // country = '';
-  // contact = '';
-  // company = '';
 
   dataForm = new FormGroup({
     country: new FormControl('', [Validators.required]),
@@ -69,14 +60,6 @@ export class BlankComponent implements OnInit {
       company: record.company,
       contact: record.contact,
     });
-
-    // this.records.[record].value = this.dataForm;
-
-    // console.log(record);
-    // [findIndex] = TableRecord(1)
-    // this.name.setValue('');
-    // console.log(this.records);
-    // console.log(TableRecord.find(this.editRecord));
   }
 
 }

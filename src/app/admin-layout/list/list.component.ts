@@ -1,37 +1,63 @@
+import { TableRecord } from './record';
 import { Component, OnInit } from '@angular/core';
-import { PlayerList } from './list.model';
-
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  PlayersList: PlayerList[] = [];
-  value: string | undefined;
+  records: TableRecord[] = [];
+  editableRecordIndex?: number;
+
+  dataForm = new FormGroup({
+    country: new FormControl('', [Validators.required]),
+    contact: new FormControl('', [Validators.required]),
+    company: new FormControl('', [Validators.required]),
+  });
+  name: any;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  playerData(){
+  saveRecord() {
+    // console.log(this.dataForm.value);
 
-    // this.value = 'string';
+    const formData = this.dataForm.value;
+    const record: TableRecord = {
+      company: formData.company ?? '',
+      contact: formData.contact ?? '',
+      country: formData.country ?? ''
+    };
+    
+    // this.records[index].company = this.dataForm.controls['company'].value;
 
+    if (this.editableRecordIndex !== undefined) {
+      // Update
+
+      this.records.splice(this.editableRecordIndex, 1, record);
+      this.editableRecordIndex = undefined;
+    } else {
+      // Insert
+
+      this.records.push(record);
+    }
+
+    
+    this.dataForm.reset();
   }
 
-  // const inputText = document.querySelector('#txt');
-  // const myButton = document.querySelector('.btn-list');
-  // const list = document.querySelector('.container');
+  editRecord(index: number) {
+    const record = this.records[index];
+    this.editableRecordIndex = index;
 
-  // myButton.addEventListener('click', (e) => {
-  //   if(inputText.value !=""){
-  //     e.preventDefault();
-
-  //     const myLi = documenent.createElement('li');
-  //     myLi.innerHTML = inputText.value;
-  //     ListComponent.appendChild(myLi)
-  //   }
-  // })
+    this.dataForm.setValue({
+      country: record.country,
+      company: record.company,
+      contact: record.contact,
+    });
+  }
 }
 

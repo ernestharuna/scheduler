@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Scheduler</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="/meow.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md bg-success navbar-dark py-3">
+          <div class="container">
+            <a href="#" class="navbar-brand fs-1 fw-bold">
+              <img alt="logo" src="/assets/ABCIN.png" class="logo">
+            </a>
+      
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+              <span class="navbar-toggler-icon">.
+              </span>
+            </button>
+      
+            <div class="collapse navbar-collapse" id="navmenu">
+              <ul class="navbar-nav ms-auto fs-5">
+                <li class="nav-item">
+                  <a routerLink="/home" class="nav-link mx-2">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#about" class="nav-link mx-2">About</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#gallery" class="nav-link mx-2">Gallery</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link mx-2">See matches <i class="fa fa-caret-down"></i></a>
+                  <div class="dropdown-content">
+                    <a href="#">Match 1</a>
+                    <a href="#">Match 2</a>
+                    <a href="#">Match 3</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a routerLink="login-page" class="nav-link mx-2">Sign in</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <footer class="p-3 bg-success">
+        <section class="container">
+           <p class="text-center">
+              We welcome everyone from absolute beginners to seasoned marathon players. Nothing beats
+              the endorphine rush 
+              <br>
+              after a run and the joy of meeting like minded people with a common interest, so whats stopping you?
+              <br>
+              come
+              and join the fun
+           </p>
+        </section>
+      </footer>
+      
+      <div class="sidebar">
+        <a routerLink="dashboard">
+            <!-- <i class="fa fa-tachometer" aria-hidden="true"></i> -->
+            <i class="material-icons">&#xe871;</i>
+             Dashboard</a>
+        <a routerLink="user-profile"><i class="fa fa-user-secret" aria-hidden="true"></i> User Profile</a>
+        <a routerLink="schedule-table"><i class="fa fa-share-alt" aria-hidden="true"></i> Scheduler</a>
+        <a routerLink="list"><i class="fa fa-table" aria-hidden="true"></i> List</a>
+        <a routerLink="payment"><i class="fa fa-credit-card" aria-hidden="true"></i> Payment</a>
+    </div>
+    
+    <!-- <div class="sidebar"> -->
+    <!--    
+        <i class="fa fa-bars fa-2x" aria-hidden="true" id="bt" (click)="toggle()"></i> -->
+    <!-- 
+     <ng-container *ngIf="show">
+         <div style="margin: 0 auto; text-align: left;">
+             <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
+             <a href="#services"><i class="fa fa-fw fa-wrench"></i> Services</a>
+             <a href="#clients"><i class="fa fa-fw fa-user"></i> Clients</a>
+             <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+         </div>
+     </ng-container>
+     
+    </div> -->
+
+    <!-- <div class="dashboard">
+
+    <button (click)="toggle()" id="bt">
+        {{buttonName}}<i class="fa fa-bars" aria-hidden="true" id="bt"></i>
+    </button>
+
+    <ng-container *ngIf="show">
+        <div style="margin: 0 auto;text-align: left;">
+            <div>
+                <label>Name:</label>
+                <div><input id="tbname" name="yourname" /></div>
+            </div>
+            <div>
+                <label>Email Address:</label>
+                <div><input name="email" id="email" /></div></div>
+            <div>
+                <label>Additional Information (optional):</label>
+                <div><textarea rows="5" cols="46"></textarea></div>
+            </div>
+        </div>
+    </ng-container>
+
+</div> -->
+
+<section class="p-4 fix">
+    <div class="container py-4">
+       <div class="row text-center g-4">
+          <div class="col-md">
+             <div class="card text-dark" id=" bg-transparent">
+                <div class="card-body text-start">
+                   <div class="h1 mb-3">
+                      <i class="bi bi-laptop"></i>
+                   </div>
+                   <h4 class="card-title mb-3">
+                      Virtual
+                   </h4>
+                   <a href="#" class="btn btn-success">Read More</a>
+                </div>
+             </div>
+          </div>
+          <div class="col-md">
+             <div class="card text-dark" id=" bg-transparent">
+                <div class="card-body text-start">
+                   <div class="h1 mb-3">
+                      <i class="bi bi-person-square"></i>
+                   </div>
+                   <h4 class="card-title mb-3">
+                      Hybrid
+                   </h4>
+                   <a href="#" class="btn btn-success">Read More</a>
+                </div>
+             </div>
+          </div>
+          <div class="col-md">
+             <div class="card text-dark" id=" bg-transparent">
+                <div class="card-body text-start">
+                   <div class="h1 mb-3">
+                      <i class="bi bi-people"></i>
+                   </div>
+                   <h4 class="card-title mb-3">
+                      In-person
+                   </h4>
+                   <a href="#" class="btn btn-success">Read More</a>
+                </div>
+             </div>
+          </div>
+          <div class="col-md">
+             <div class="card text-dark" id=" bg-transparent">
+                <div class="card-body text-start">
+                   <div class="h1 mb-3">
+                      <i class="bi bi-people"></i>
+                   </div>
+                   <h4 class="card-title mb-3">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                   </h4>
+                   <a href="#" class="btn btn-success">Calender</a>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </section>
+     
+      <footer>
+        <section class="bg-dark text-light p-3 text-sm-start">
+           <div class="container py-5">
+              <div class="row text-center g-4">
+                 <div class="col-md">
+                    <div class="bg-dark text-light">
+                       <div class="text-center">
+                          <div class="h1 mb-3">
+                             <i class="bi bi-laptop"></i>
+                          </div>
+                          <h3 class="card-title mb-3">
+                             Virtual
+                          </h3>
+                          <p class="card-text">
+                             For those runners looking to challenge thier previous best and cross the finish line faster than
+                             ever before. This option is buil around improving you.
+                          </p>
+        
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-md">
+                    <div class="bg-dark text-light">
+                       <div class="text-center">
+                          <div class="h1 mb-3">
+                             <i class="bi bi-person-square"></i>
+                          </div>
+                          <h3 class="card-title mb-3">
+                             Hybrid
+                          </h3>
+                          <p class="card-text">
+                             For those runners looking to challenge thier previous best and cross the finish line faster than
+                             ever before. This option is buil around improving you.
+                          </p>
+        
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-md">
+                    <div class=" bg-dark text-light">
+                       <div class="text-center">
+                          <div class="h1 mb-3">
+                             <i class="bi bi-people"></i>
+                          </div>
+                          <h3 class="card-title mb-3">
+                             In-person
+                          </h3>
+                          <p class="card-text">
+                             For those runners looking to challenge thier previous best and cross the finish line faster than
+                             ever before. This option is buil around improving you.
+                          </p>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-md">
+                    <div class="bg-dark text-light">
+                       <div class="text-center">
+                          <div class="h1 mb-3">
+                             <i class="bi bi-people"></i>
+                          </div>
+                          <h3 class="card-title mb-3">
+                             In-person
+                          </h3>
+                          <p class="card-text">
+                             For those runners looking to challenge thier previous best and cross the finish line faster than
+                             ever before. This option is buil around improving you.
+                          </p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </section>
+      </footer>
+      
+</body>
+
+</html>
