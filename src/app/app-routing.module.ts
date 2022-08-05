@@ -12,41 +12,19 @@ import { BlankComponent } from './blank/blank.component';
 import { PaymentComponent } from './admin-layout/payment/payment.component';
 
 const routes: Routes = [
-{ 
-  path: '', pathMatch: 'full', component: HomePageComponent 
-},
-{
-   path: 'home', component: HomePageComponent 
-},
-{
-   path: 'login-page', component: LoginPageComponent
-},
-
-{
-   path: 'admin-layout', component: AdminLayoutComponent,
-   children: [
-      {
-         path: 'dashboard',
-         component: DashboardComponent
-      },
-      {
-         path: 'user-profile',
-         component: UsersProfileComponent
-      },
-      {
-         path: 'schedule-table', component: SchedulerComponent
-      },
-      {
-         path: 'list', component: ListComponent
-      },
-      {
-         path: 'blank', component: BlankComponent
-      },
-      {
-         path: 'payment', component: PaymentComponent
-      },
-   ]
-},
+   { path: '', pathMatch: 'full', component: HomePageComponent },
+   { path: 'home', component: HomePageComponent },
+   { path: 'login-page', component: LoginPageComponent },
+   { path: 'admin-layout', component: AdminLayoutComponent,
+      children: [
+         { path: 'dashboard', component: DashboardComponent },
+         { path: 'user-profile', component: UsersProfileComponent },
+         { path: 'schedule-table', component: SchedulerComponent },
+         { path: 'list', component: ListComponent },
+         { path: 'blank', component: BlankComponent },
+         { path: 'payment', component: PaymentComponent },
+      ]
+   },
 
 ];
 

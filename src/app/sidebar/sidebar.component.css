@@ -1,37 +1,26 @@
 .sidebar {
-    background: #000;
-    position: fixed;
-    height: 100%;
-    width: 17%;
-    z-index: 1;
-    border: 6px;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-    padding-top: 16px;
-    padding: 10px;
-    border-radius: 3px;
-  }
-  
-.sidebar > a > i{
-    color: #fff;
-    padding-right: 20px;
+  width: 100%;
+  z-index: 1;
+  padding: 20px;                                                                                                                                                                                                                                                          
 }
 
-  .sidebar a {
-    width: 100%;
-    padding: 50px 12px 10px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    background: #000;
-    color: #818181;
-    display: block;
-  }
-  
-  .sidebar a:hover {
-    color: #f1f1f1;
-  }
-  
-  .ng-container > div{
-    padding-top: 40px;
-  }
+.sidebar>a>i { 
+  color: #fff;
+  padding-right: 20px;
+}
+
+.sidebar a {
+  padding: 5px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: inline-block;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.ng-container>div {
+  padding-top: 40px;
+}
