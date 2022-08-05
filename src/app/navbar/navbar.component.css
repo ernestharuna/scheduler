@@ -3,6 +3,16 @@
    height: 70px;
 }
 
+li a {
+   transition: .3s;
+}
+
+li a:hover {
+   text-decoration: underline;
+   text-decoration-thickness: 2px;
+   text-decoration-color: yellow;
+}
+
 select {
    background: transparent;
    border: none;
@@ -29,7 +39,7 @@ select {
 }
 
 .dropdown-content a:hover {
-   background-color: rgb(61, 151, 61);
+   background-color: rgb(230, 230, 230);
 }
 
 .dropdown:hover .dropdown-content {
