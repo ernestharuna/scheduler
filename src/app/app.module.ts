@@ -9,10 +9,14 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { ScheduleTableComponent } from './schedule-table/schedule-table.component';
 import { FooterComponent } from './footer/footer.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { UsersProfileComponent } from './users-profile/users-profile.component';
+import { DashboardComponent } from './admin-layout/dashboard/dashboard.component';
+import { UsersProfileComponent } from './admin-layout/users-profile/users-profile.component';
+import { ListComponent } from './admin-layout/list/list.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BlankComponent } from './blank/blank.component';
+import { SchedulerComponent } from './scheduler/scheduler.component';
+import { PaymentComponent } from './admin-layout/payment/payment.component';
 
 
 @NgModule({
@@ -23,15 +27,20 @@ import { UsersProfileComponent } from './users-profile/users-profile.component';
     AdminLayoutComponent,
     SidebarComponent,
     NavbarComponent,
-    ScheduleTableComponent,
     FooterComponent,
     DashboardComponent,
-    UsersProfileComponent
+    UsersProfileComponent,
+    ListComponent,
+    BlankComponent,
+    SchedulerComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
