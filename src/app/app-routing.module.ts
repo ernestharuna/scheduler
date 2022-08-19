@@ -11,6 +11,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { BlankComponent } from './blank/blank.component';
 import { PaymentComponent } from './admin-layout/payment/payment.component';
 import { SuperAdminLayoutComponent } from './super-admin-layout/super-admin-layout.component';
+import { SuperDashboardComponent } from './super-admin-layout/super-dashboard/super-dashboard.component';
 
 const routes: Routes = [
    { path: '', pathMatch: 'full', component: HomePageComponent },
@@ -28,7 +29,7 @@ const routes: Routes = [
    },
    { path: 'super-admin-layout', component: SuperAdminLayoutComponent, 
 children: [
-   
+   { path: 'super-dashboard', component: SuperDashboardComponent } 
 ]}
 ];
 

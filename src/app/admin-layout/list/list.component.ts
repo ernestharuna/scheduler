@@ -14,6 +14,13 @@ export class ListComponent implements OnInit {
     country: new FormControl('', [Validators.required]),
     contact: new FormControl('', [Validators.required]),
     company: new FormControl('', [Validators.required]),
+    gender: new FormControl('', [Validators.required]),
+    dob: new FormControl('', [Validators.required]),
+
+    // // 
+    // gender: string;
+    // dob: any;
+
   });
   name: any;
 
@@ -29,7 +36,9 @@ export class ListComponent implements OnInit {
     const record: TableRecord = {
       company: formData.company ?? '',
       contact: formData.contact ?? '',
-      country: formData.country ?? ''
+      country: formData.country ?? '',
+      gender: formData.gender ?? '',
+      dob: formData.dob ?? '',
     };
     
     // this.records[index].company = this.dataForm.controls['company'].value;
@@ -57,6 +66,8 @@ export class ListComponent implements OnInit {
       country: record.country,
       company: record.company,
       contact: record.contact,
+      gender: record.gender,
+      dob: record.dob,
     });
   }
 }
