@@ -1,0 +1,27 @@
+/* style the container */
+.container {
+  border-radius: 5px;
+  padding: 20px 10px;
+}
+
+/* style inputs and link buttons */
+input,
+.btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px 0;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+input {
+  background-color: rgb(238, 238, 238);
+}
+
+input:focus {
+  outline: 2px solid #04AA6D;
+}

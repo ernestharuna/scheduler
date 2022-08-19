@@ -1,0 +1,26 @@
+.sidebar {
+  width: 100%;
+  z-index: 1;
+  padding: 20px;                                                                                                                                                                                                                                                          
+}
+
+.sidebar>a>i { 
+  color: #fff;
+  padding-right: 20px;
+}
+
+.sidebar a {
+  padding: 5px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: inline-block;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.ng-container>div {
+  padding-top: 40px;
+}

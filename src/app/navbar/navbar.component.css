@@ -1,0 +1,47 @@
+.logo {
+   width: 70px;
+   height: 70px;
+}
+
+li a {
+   transition: .3s;
+}
+
+li a:hover {
+   text-decoration: underline;
+   text-decoration-thickness: 2px;
+   text-decoration-color: yellow;
+}
+
+select {
+   background: transparent;
+   border: none;
+   color: #fff;
+}
+
+.dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #f9f9f9;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+   border-radius: 5px;
+   z-index: 1;
+}
+
+.dropdown-content a {
+   float: none;
+   color: black;
+   padding: 8px 12px;
+   text-decoration: none;
+   display: block;
+   text-align: left;
+}
+
+.dropdown-content a:hover {
+   background-color: rgb(230, 230, 230);
+}
+
+.dropdown:hover .dropdown-content {
+   display: block;
+}

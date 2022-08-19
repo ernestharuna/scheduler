@@ -1,0 +1,11 @@
+footer {
+   color: rgb(181, 181, 181);
+   font-size: 18px;
+}
+
+a {
+   text-decoration: none;
+   font-size: larger;
+   display: inline-block;
+   margin: 0 30px;
+}
