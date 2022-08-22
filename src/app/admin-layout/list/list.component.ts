@@ -13,7 +13,7 @@ export class ListComponent implements OnInit {
   dataForm = new FormGroup({
     country: new FormControl('', [Validators.required]),
     contact: new FormControl('', [Validators.required]),
-    company: new FormControl('', [Validators.required]),
+    name: new FormControl('', [Validators.required]),
     gender: new FormControl('', [Validators.required]),
     dob: new FormControl('', [Validators.required]),
 
@@ -34,7 +34,7 @@ export class ListComponent implements OnInit {
 
     const formData = this.dataForm.value;
     const record: TableRecord = {
-      company: formData.company ?? '',
+      name: formData.name ?? '',
       contact: formData.contact ?? '',
       country: formData.country ?? '',
       gender: formData.gender ?? '',
@@ -64,7 +64,7 @@ export class ListComponent implements OnInit {
 
     this.dataForm.setValue({
       country: record.country,
-      company: record.company,
+      name: record.name,
       contact: record.contact,
       gender: record.gender,
       dob: record.dob,

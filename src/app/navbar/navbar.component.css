@@ -45,3 +45,7 @@ select {
 .dropdown:hover .dropdown-content {
    display: block;
 }
+
+header{
+   width: 100%
+}

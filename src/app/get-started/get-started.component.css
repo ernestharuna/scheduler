@@ -8,13 +8,13 @@
     text-align: center;
 }
 
-.animated-cards{
+.animated-cards{  
+    width: 700px;
+    margin: 0 auto;
     display: grid;
     grid-gap: 20px;
-    padding-top: 30px;
+    padding-top: 30px; 
     padding-bottom: 30px;
-    padding-left: 250px;
-    padding-right: 250px;
     grid-template-columns: 1fr 1fr;
 }
 
@@ -25,5 +25,29 @@
     height: 200px;
     padding: 20px;
     border-radius: 5px;
-    background: #ccc;
+    background: #008800;
+}
+
+i{
+    margin-top: 100px;
+    background: #fff;
+    padding: 6px;
+    color: #008800;
+    width: 100%;
+}
+
+.abcin{
+    width: 150px;
+    height: 150px;
+}
+
+.club-login{
+    width: 170px;
+    height: 170px;
+}
+
+@media screen and (max-width: 697px) {
+    .animated-cards{
+        grid-template-columns: 1fr;
+    }
 }

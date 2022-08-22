@@ -15,11 +15,20 @@ import { UsersProfileComponent } from './admin-layout/users-profile/users-profil
 import { ListComponent } from './admin-layout/list/list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BlankComponent } from './blank/blank.component';
-import { SchedulerComponent } from './scheduler/scheduler.component';
+import { SchedulerComponent } from './admin-layout/scheduler/scheduler.component';
 import { PaymentComponent } from './admin-layout/payment/payment.component';
-import { SuperAdminLayoutComponent } from './super-admin-layout/super-admin-layout.component';
-import { SuperSidebarComponent } from './super-admin-layout/super-sidebar/super-sidebar.component';
-import { SuperDashboardComponent } from './super-admin-layout/super-dashboard/super-dashboard.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { SuperAdminComponent } from './super-admin/super-admin.component';
+import { SuperPagesComponent } from './super-admin/super-pages/super-pages.component';
+import { ViewTournamentComponent } from './super-admin/view-tournament/view-tournament.component';
+import { SuperSettingsComponent } from './super-admin/super-settings/super-settings.component';
+import { SuperSchedulerComponent } from './super-admin/super-scheduler/super-scheduler.component';
+import { SuperTournamentViewerComponent } from './super-admin/super-tournament-viewer/super-tournament-viewer.component';
+import { SuperTeamsComponent } from './super-admin/super-teams/super-teams.component';
+import { SuperPaymentComponent } from './super-admin/super-payment/super-payment.component';
+import { GetStartedComponent } from './get-started/get-started.component';
+import { AbcinLoginComponent } from './abcin-login/abcin-login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -37,16 +46,25 @@ import { SuperDashboardComponent } from './super-admin-layout/super-dashboard/su
     BlankComponent,
     SchedulerComponent,
     PaymentComponent,
-    SuperAdminLayoutComponent,
-    SuperSidebarComponent,
-    SuperDashboardComponent
+    SuperAdminComponent,
+    SuperPagesComponent,
+    ViewTournamentComponent,
+    SuperSettingsComponent,
+    SuperSchedulerComponent,
+    SuperTournamentViewerComponent,
+    SuperTeamsComponent,
+    SuperPaymentComponent,
+    GetStartedComponent,
+    AbcinLoginComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    NgbModule,
+    NgbModule, 
     ReactiveFormsModule,
+    FlexLayoutModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

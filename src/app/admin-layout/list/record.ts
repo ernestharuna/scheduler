@@ -1,5 +1,5 @@
 export interface TableRecord {
-    company: string;
+    name: string;
     contact: string;
     country: string;
     gender: string;
