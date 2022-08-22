@@ -1,0 +1,154 @@
+.Hero{
+    padding: 5px;
+    width: 100%;
+    padding-top: 50px;
+    margin-left: 20px;
+}
+
+.Hero .grid-system{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.grid-system > div{
+    display: block;
+    width: 240px;
+    height: 140px;
+    padding: 10px;
+    padding-left: 20px;
+    border-right: 3px solid green;
+    border-radius: 8px;
+    background: rgb(255, 254, 254);
+    color: #000;
+}
+
+.grid-system > div:hover{
+    box-sizing: border-box;
+    box-shadow: 0 3px 3px 2px;
+}
+
+.grid-system > div > i{
+    color: #008000;
+}
+
+.grid-system > div > button{
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px;
+    width: 90px;
+    border-radius: 3px;
+    background: #008000;
+}
+
+/* Calender Ares */
+.Hero .calender{
+    width: 50%;
+    height: 40vh;
+    background: #fff;
+    margin-left: 10px;
+    margin-top: 30px;
+    border-right: 3px solid #008000;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 1300px) {
+    .Hero .grid-system{
+        grid-gap: 30px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+  .grid-system > div{
+    width: 280px;
+    height: 140px;
+  }
+
+  .grid-system > div > h5{
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+    .Hero .grid-system{
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+  .grid-system > div{
+    width: 280px;
+    height: 190;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+    .Hero .grid-system{
+        grid-gap: 28px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+  .grid-system > div{
+    width: 230px;
+    height: 190;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+    .Hero .grid-system{
+        grid-gap: 28px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+  .grid-system > div{
+    width: 340px;
+    height: 170;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+    .Hero .grid-system{
+        grid-gap: 28px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+  .grid-system > div{
+    width: 300px;
+    height: 170;
+  }
+}
+
+@media screen and (max-width: 900px) {
+    .Hero .grid-system{
+        grid-gap: 28px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+  .grid-system > div{
+    width: 250px;
+    height: 170;
+  }
+}
+
+@media screen and (max-width: 800px) {
+    .Hero .grid-system{
+        grid-gap: 28px;
+        grid-template-columns: 1fr;
+    }
+
+  .grid-system > div{
+    width: 400px;
+    height: 170;
+  }
+}
+
+@media screen and (max-width: 700px) {
+    .Hero .grid-system{
+        grid-gap: 28px;
+        grid-template-columns: 1fr;
+    }
+
+  .grid-system > div{
+    width: 360px;
+    height: 170;
+  }
+}

@@ -1,0 +1,10 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.Hero{
+    width: 100vw;
+    background: rgb(235, 235, 235);
+    display: flex;
+}
