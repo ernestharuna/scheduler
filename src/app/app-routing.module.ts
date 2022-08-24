@@ -1,5 +1,4 @@
 
-import { SchedulerComponent } from './admin-layout/scheduler/scheduler.component';
 import { ListComponent } from './admin-layout/list/list.component';
 import { UsersProfileComponent } from './admin-layout/users-profile/users-profile.component';
 import { DashboardComponent } from './admin-layout/dashboard/dashboard.component';
@@ -11,7 +10,6 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { BlankComponent } from './blank/blank.component';
 import { PaymentComponent } from './admin-layout/payment/payment.component';
 import { SuperAdminComponent } from './super-admin/super-admin.component';
-import { SuperPagesComponent } from './super-admin/super-pages/super-pages.component';
 import { SuperDashboardComponent } from './super-admin/super-dashboard/super-dashboard.component';
 import { SuperSettingsComponent } from './super-admin/super-settings/super-settings.component';
 import { SuperClubsComponent } from './super-admin/super-clubs/super-clubs.component';
@@ -20,6 +18,7 @@ import { ViewTournamentComponent } from './super-admin/view-tournament/view-tour
 import { SuperTeamsComponent } from './super-admin/super-teams/super-teams.component';
 import { GetStartedComponent } from './get-started/get-started.component';
 import { AbcinLoginComponent } from './abcin-login/abcin-login.component';
+import { SchedulerComponent } from './scheduler/scheduler.component';
 
 const routes: Routes = [
    { path: '', pathMatch: 'full', component: HomePageComponent },
@@ -31,10 +30,10 @@ const routes: Routes = [
       children: [
          { path: 'dashboard', component: DashboardComponent },
          { path: 'user-profile', component: UsersProfileComponent },
-         { path: 'schedule-table', component: SchedulerComponent },
          { path: 'list', component: ListComponent },
          { path: 'blank', component: BlankComponent },
-         { path: 'payment', component: PaymentComponent, }
+         { path: 'payment', component: PaymentComponent, },
+         { path: 'scheduler', component: SchedulerComponent }
       ]
    },
    {

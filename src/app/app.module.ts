@@ -15,7 +15,6 @@ import { UsersProfileComponent } from './admin-layout/users-profile/users-profil
 import { ListComponent } from './admin-layout/list/list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BlankComponent } from './blank/blank.component';
-import { SchedulerComponent } from './admin-layout/scheduler/scheduler.component';
 import { PaymentComponent } from './admin-layout/payment/payment.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SuperAdminComponent } from './super-admin/super-admin.component';
@@ -29,6 +28,13 @@ import { SuperPaymentComponent } from './super-admin/super-payment/super-payment
 import { GetStartedComponent } from './get-started/get-started.component';
 import { AbcinLoginComponent } from './abcin-login/abcin-login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DragDropModule } from '@angular/cdk/drag-drop'
+import { SchedulerComponent } from './scheduler/scheduler.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 
 @NgModule({
@@ -44,7 +50,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     UsersProfileComponent,
     ListComponent,
     BlankComponent,
-    SchedulerComponent,
     PaymentComponent,
     SuperAdminComponent,
     SuperPagesComponent,
@@ -55,7 +60,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SuperTeamsComponent,
     SuperPaymentComponent,
     GetStartedComponent,
-    AbcinLoginComponent
+    AbcinLoginComponent,
+    SchedulerComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +71,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NgbModule, 
     ReactiveFormsModule,
     FlexLayoutModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatPaginatorModule,
+    MatAutocompleteModule,
+    MatDialogModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

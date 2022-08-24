@@ -4,29 +4,38 @@
     </div>
     <div class="form-container">
         <div>
-            <form>
-                <h1>Welcome back to ABCIN.</h1>
-                <p>Input your login details</p>
+            <form [formGroup]="abcinLogin" (ngSubmit)="onSubmit">
+                <h3>WELCOME BACK ABCIN.</h3>
+                <p><i>Input your login details</i></p>
 
                     <div class="form">
                         <div class="grid-layout">
-                            <input placeholder="hello">
-                            <input placeholder="World">
+                            <div>
+                                <small class="text-danger">Invalid details</small>
+                                <input formControlName="firstName">
+                            </div>
+                            <div>
+                                <small class="text-danger">Invalid details</small>
+                                <input formControlName="firstName">
+                            </div>
                         </div>
-                        
+                            
                         <div class="input-area">
-                            <input placeholder="hi">
-                                <br>
-                            <input placeholder="Hey">
+                            <input formControlName="newValue">
                         </div>
                         <div>
-                            <button routerLink="/super-admin/super-dashboard">Login</button>
+                            <button routerLink="/super-admin/super-dashboard" [disabled]="!abcinLogin.valid">Login</button>
                         </div>
                     </div>
             </form>
         </div>
     </div>
 </section>
+
+<!-- <div style="margin: 0 auto; text-align: center";>
+    <div style="width: 200px; height: 200px; background: #ccc;">Hi</div>
+    <div style="width: 200px; height: 200px; background: #ccc;">Hello</div>
+</div> -->
 
 <!-- <form>
     <div class="form-row">
@@ -74,3 +83,41 @@
     </div>
     <button type="submit" class="btn btn-primary">Sign in</button>
   </form> -->
+
+
+  <!-- <section>
+    <div class="section">
+
+    </div>
+    <div class="form-container">
+        <div>
+            <form class="form-horizontal" (ngSubmit)="TDSimpleForm.form.valid" #TDSimpleForm="ngForm">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label class="form-control-label" for="TDName">Name</label>
+                      <input class="form-control input-md" ngModel #TDNameRef="ngModel" required id="TDName" name="TDName"
+                        type="text" placeholder="Name">
+                      <span class="invalid-form">
+                        <small class="form-text text-muted danger">This
+                          field is
+                          required!</small>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label class="form-control-label" for="TDEmail">Email</label>
+                      <input class="form-control input-md" ngModel #TDEmailRef="ngModel" required email id="TDEmail"
+                        name="TDEmail" type="text" placeholder="Email">
+                      <span *ngIf="TDSimpleForm.submitted" class="invalid-form">
+                        <small class="form-text text-muted danger" *ngIf="!TDEmailRef.valid">email must be valid!</small>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary" rippleEffect>Submit</button>
+              </form>
+        </div>
+    </div>
+</section> -->

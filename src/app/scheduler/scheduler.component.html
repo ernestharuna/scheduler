@@ -1,0 +1,114 @@
+<!-- <div id="bounding-box">
+    <div class="drag-box" cdkDrag cdkDragBoundary="#bounding-box" cdkDragLockAxis="x">
+        Like, Share and comment!!!
+        <div class="handle" cdkHandle>
+
+        </div>
+    </div>
+</div>
+
+
+<div style="width: 40%; margin: 0 auto; padding: 20px 0 20px 0;">
+        
+    <div 
+    cdkDropList
+    [cdkDropListConnectedTo]="['weekDays']"
+    (cdkDropListDropped)="onDrop($event)" 
+    [cdkDropListData]="newData" 
+    style="display: flex;"  
+    id="newData" >
+        <div class="drag-item" *ngFor="let month of newData">
+            <div cdkDrag>
+                {{month}}
+            </div>
+        </div>
+    </div>
+
+    <div 
+    cdkDropList 
+    [cdkDropListConnectedTo]="['newData']"
+    (cdkDropListDropped)="onDrop($event)" 
+    [cdkDropListData]="weekDays"              
+    cdkDropListOrientation="horizontal" 
+    id="weekDays" >
+        <div *ngFor="let day of weekDays" class="drag-item">
+            <div cdkDrag>
+                {{day}}
+                <img *cdkDragPreview src="/assets/ABCIN.png">
+            </div>
+        </div>
+    </div>
+
+</div> -->
+
+
+<!-- <div cdkDropListGroup>
+
+    <div style="width: 40%; margin: 0 auto; padding: 20px 0 20px 0;">
+        
+        <div cdkDropList [cdkDropListData]="newData" style="display: flex;" (cdkDropListDropped)="newData">
+            <div cdkDrag class="drag-item" *ngFor="let month of newData">
+                {{month}}
+            </div>
+        </div>
+
+        <div cdkDropList (cdkDropListDropped)="onDrop($event)" [cdkDropListData]="weekDays"              cdkDropListOrientation="horizontal" (cdkDropListDropped)="newData">
+            <div cdkDrag *ngFor="let day of weekDays" class="drag-item">
+                    {{day}}
+                    <img *cdkDragPreview src="/assets/ABCIN.png">
+            </div>
+        </div>
+
+    </div>
+
+</div> -->
+
+<!-- 
+<div 
+cdkDropList
+(cdkDropListDropped)="onDrop($event)"
+[cdkDropListData]="weekDays"
+style="width: 40%; margin: 0 auto; padding: 20px 0 20px 0;"
+>
+    <div 
+    cdkDrag 
+    *ngFor="let day of weekDays" 
+    class="drag-item">
+            {{day}}
+    </div>
+</div>
+
+<div 
+cdkDropList
+(cdkDropListDropped)="onDrop($event)"
+[cdkDropListData]=" newData"
+style="width: 40%; margin: 0 auto; padding: 20px 0 20px 0;"
+>
+    <div 
+    cdkDrag 
+    *ngFor="let data of  newData" 
+    class="drag-item">
+            {{data}}
+    </div>
+</div> -->
+
+
+<div style="width: 40%; margin: 0 auto; padding: 20px 0 20px 0;" cdkDropListGroup>
+    <h1>Day</h1>
+    <div cdkDropList [cdkDropListData]="weekDays" (cdkDropListDropped)="onDrop($event)" id="weekDays" [cdkDropListConnectedTo]="newData">            
+        <div cdkDrag class="drag-item" *ngFor="let day of weekDays">
+            {{day}}
+        </div>
+    </div>
+
+    <h1>Data</h1>
+    <div cdkDropList [cdkDropListData]="newData" (cdkDropListDropped)="onDrop($event)" id="newData" [cdkDropListConnectedTo]="weekDays">
+        <form [formGroup]="newForm">
+            <input placeholder="New Data" formControlName="name">
+            <button (click)="saveValue()" [disabled] ="newForm.invalid">save</button>
+        </form>
+        <div cdkDrag class="drag-item" *ngFor="let data of newData" let i = index>
+            {{data}}<button (click)="editValue(data)">edit</button><button (click)="deteleValue(data)">delete</button>
+        </div>
+    </div>
+</div>
