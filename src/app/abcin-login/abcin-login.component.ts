@@ -7,8 +7,6 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./abcin-login.component.css']
 })
 export class AbcinLoginComponent implements OnInit {
-
-  
     abcinLogin = new FormGroup({
       firstName : new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(30)]),
       lastName : new FormControl('', [Validators.required, Validators.email]),

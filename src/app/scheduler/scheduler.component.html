@@ -89,13 +89,13 @@ style="width: 40%; margin: 0 auto; padding: 20px 0 20px 0;"
     *ngFor="let data of  newData" 
     class="drag-item">
             {{data}}
-    </div>
+    </div>sesw
 </div> -->
 
-
-<div style="width: 40%; margin: 0 auto; padding: 20px 0 20px 0;" cdkDropListGroup>
+<!-- 
+<div style="width: 100%; margin: 0 auto; padding: 20px 0 20px 0; display: flex;" cdkDropListGroup>
     <h1>Day</h1>
-    <div cdkDropList [cdkDropListData]="weekDays" (cdkDropListDropped)="onDrop($event)" id="weekDays" [cdkDropListConnectedTo]="newData">            
+    <div cdkDropList [cdkDropListData]="weekDays" (cdkDropListDropped)="onDrop($event)" id="weekDays" [cdkDropListConnectedTo]="newData" style="">            
         <div cdkDrag class="drag-item" *ngFor="let day of weekDays">
             {{day}}
         </div>
@@ -111,4 +111,4 @@ style="width: 40%; margin: 0 auto; padding: 20px 0 20px 0;"
             {{data}}<button (click)="editValue(data)">edit</button><button (click)="deteleValue(data)">delete</button>
         </div>
     </div>
-</div>
+</div> -->

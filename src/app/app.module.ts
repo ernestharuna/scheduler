@@ -35,6 +35,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { DragDropModule } from '@angular/cdk/drag-drop'
 import { SchedulerComponent } from './scheduler/scheduler.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { MarqueeComponent } from './marquee/marquee.component';
+import { CardsComponent } from './cards/cards.component';
+import { ClubsComponent } from './clubs/clubs.component';
 
 
 @NgModule({
@@ -62,7 +65,10 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     GetStartedComponent,
     AbcinLoginComponent,
     SchedulerComponent,
-    SignUpComponent
+    SignUpComponent,
+    MarqueeComponent,
+    CardsComponent,
+    ClubsComponent
   ],
   imports: [
     BrowserModule,

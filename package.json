@@ -32,9 +32,11 @@
     "flexlayout": "^1.0.6",
     "mat": "^1.0.20",
     "material": "^0.4.3",
+    "ng-particles": "^3.2.4",
     "package": "^1.0.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
+    "tsparticles-engine": "^2.2.4",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {

@@ -1,22 +1,25 @@
-<div class="sidebar bg-dark">
+<!-- <div class="sidebar bg-dark">
     <a routerLink="dashboard">Dashboard</a>
     <a routerLink="user-profile">User Profile</a>
     <a routerLink="scheduler">Scheduler</a>
     <a routerLink="list">List</a>
     <a routerLink="payment">Payment</a>
-</div>
+</div> -->
 
 <div class="sidebar"> 
 
     <i class="fa fa-bars fa-2x" aria-hidden="true" id="bt" (click)="toggle()"></i> 
 
  <ng-container *ngIf="show">
-     <div style="margin: 0 auto; text-align: left;">
-         <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
-         <a href="#services"><i class="fa fa-fw fa-wrench"></i> Services</a>
-         <a href="#clients"><i class="fa fa-fw fa-user"></i> Clients</a>
-         <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-     </div>
+    <div class="sidebar bg-dark">
+        <ul>
+            <li><a routerLink="dashboard">Dashboard</a></li>
+            <li><a routerLink="user-profile">User Profile</a></li>
+            <li><a routerLink="scheduler">Scheduler</a></li>
+            <li><a routerLink="list">List</a></li>
+            <li><a routerLink="payment">Payment</a></li>
+        </ul>
+    </div> 
  </ng-container>
  
 </div> 

@@ -1,24 +1,22 @@
-<div class="row">
+<!-- <div class="row">
     <div class="col-75">
       <div class="container">
         <form action="/action_page.php">
         
           <div class="row">
             <div class="col-50">
-              <h3>ABCIN DUES</h3>
+              <h2>ABCIN DUES</h2>
               <label for="fname"><i class="fa fa-user"></i> Club Name</label>
               <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
               <label for="email"><i class="fa fa-envelope"></i> Club Email</label>
               <input type="text" id="email" name="email" placeholder="john@example.com">
-              <label for="adr"><i class="fa fa-address-card-o"></i> Club Address</label>
+              <label for="adr"><i class="fa fa-address-card-o"></i> Club Id</label>
               <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
-              <label for="city"><i class="fa fa-institution"></i> City</label>
-              <input type="text" id="city" name="city" placeholder="New York">
   
               <div class="row">
                 <div class="col-50">
                   <label for="state">State</label>
-                  <input type="text" id="state" name="state" placeholder="NY">
+                  <input type="text" id="state" name="state" placeholder="Abuja">
                 </div>
                 <div class="col-50">
                   <label for="zip">Zip</label>
@@ -28,8 +26,7 @@
             </div>
   
             <div class="col-50">
-              <h3>Payment</h3>
-              <label for="fname">Accepted Cards</label>
+              <h2>Payment</h2>
               <div class="icon-container">
                 <i class="fa fa-cc-visa" style="color:navy;"></i>
                 <i class="fa fa-cc-amex" style="color:blue;"></i>
@@ -63,4 +60,44 @@
       </div>
     </div>
   </div>
-  
+   -->
+
+
+
+<div class="container p-0" style="">
+    <div class="card px-4">
+        <p class="h8 py-3">Payment Details</p>
+        <div class="row gx-3">
+            <div class="col-12">
+                <div class="d-flex flex-column">
+                    <p class="text mb-1">Club Name</p>
+                    <input class="form-control mb-3" type="text" placeholder="Name" value="Barry Allen">
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="d-flex flex-column">
+                    <p class="text mb-1">Card Number</p>
+                    <input class="form-control mb-3" type="text" placeholder="1234 5678 435678">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="d-flex flex-column">
+                    <p class="text mb-1">Expiry</p>
+                    <input class="form-control mb-3" type="text" placeholder="MM/YYYY">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="d-flex flex-column">
+                    <p class="text mb-1">CVV/CVC</p>
+                    <input class="form-control mb-3 pt-2 " type="password" placeholder="***">
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="btn btn-primary mb-3">
+                    <span class="ps-3">Pay $243</span>
+                    <span class="fas fa-arrow-right"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

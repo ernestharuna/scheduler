@@ -19,6 +19,7 @@ import { SuperTeamsComponent } from './super-admin/super-teams/super-teams.compo
 import { GetStartedComponent } from './get-started/get-started.component';
 import { AbcinLoginComponent } from './abcin-login/abcin-login.component';
 import { SchedulerComponent } from './scheduler/scheduler.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 const routes: Routes = [
    { path: '', pathMatch: 'full', component: HomePageComponent },
@@ -26,6 +27,7 @@ const routes: Routes = [
    { path: 'login-page', component: LoginPageComponent },
    { path: 'abcin-login', component: AbcinLoginComponent },
    { path: 'get-started', component: GetStartedComponent },
+   { path: 'sign-up', component: SignUpComponent }, 
    { path: 'admin-layout', component: AdminLayoutComponent,
       children: [
          { path: 'dashboard', component: DashboardComponent },
