@@ -30,6 +30,7 @@
     "cdk": "^2.38.1",
     "error": "^10.4.0",
     "flexlayout": "^1.0.6",
+    "jquery": "^3.6.1",
     "mat": "^1.0.20",
     "material": "^0.4.3",
     "ng-particles": "^3.2.4",

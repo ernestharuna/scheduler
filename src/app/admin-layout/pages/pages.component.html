@@ -1,0 +1,34 @@
+<div>
+    <button class="newBtn" (click)="toggleView()">
+        <div id="bars1"></div>
+        <div id="bars2"></div>
+        <div id="bars1"></div>
+    </button>
+    
+    <div *ngIf="!displayView" class="Hero" id="Hero-div">
+        <ul>
+            <li class="nav-item"><a class="nav-link mx-4" routerLink="dashboard">Dashoard</a></li>
+    
+            <li class="nav-item dropdown">
+                <a class="nav-link mx-4" routerLink="clubs">Clubs<i style="margin-left: 10px;" class="fa fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                  <a routerLink="list">Clubs</a>
+                  <a routerLink="clubs">Teams</a>
+                </div>
+              </li>
+    
+            <li class="nav-item"><a class="nav-link mx-4"  routerLink="scheduler">Schedule-Tournament</a></li>
+    
+            <li class="nav-item dropdown">
+                <a class="nav-link mx-4" routerLink="settings">Settings</a>
+                <!-- <div class="dropdown-content">
+                  <a routerLink="list">Settings</a>
+                  <a href="#">Teams</a>
+                  <a href="#">Settings</a>
+                </div> -->
+              </li>
+    
+        </ul>
+    </div>
+    
+      

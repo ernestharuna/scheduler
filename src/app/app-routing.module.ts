@@ -20,6 +20,8 @@ import { GetStartedComponent } from './get-started/get-started.component';
 import { AbcinLoginComponent } from './abcin-login/abcin-login.component';
 import { SchedulerComponent } from './scheduler/scheduler.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { ClubsComponent } from './clubs/clubs.component';
+import { SettingsComponent } from './admin-layout/settings/settings.component';
 
 const routes: Routes = [
    { path: '', pathMatch: 'full', component: HomePageComponent },
@@ -35,7 +37,9 @@ const routes: Routes = [
          { path: 'list', component: ListComponent },
          { path: 'blank', component: BlankComponent },
          { path: 'payment', component: PaymentComponent, },
-         { path: 'scheduler', component: SchedulerComponent }
+         { path: 'scheduler', component: SchedulerComponent },
+         { path: 'clubs', component: ClubsComponent },
+         { path: 'settings', component: SettingsComponent }
       ]
    },
    {

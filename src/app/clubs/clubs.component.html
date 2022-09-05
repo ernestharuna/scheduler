@@ -1,58 +1,21 @@
-<ul class="tilesWrap">
-	<li>
-		<h2>01</h2>
-		<h3>Jahi Badminton Club</h3>
-		<p>
-			Lorem Ipsum is simply dummy text of the printing and typesetting   
-			industry. Lorem Ipsum has been the industry's standard dummy text ever 
-			since the 1500s.
-		</p>
-		<button>Read more</button>
-	</li>
-	<li>
-		<h2>02</h2>
-		<h3>Jahi Badminton Club</h3>
-		<p>
-			When an unknown printer took a galley of type and scrambled it to make 
-			a type specimen book. It has survived not only five centuries.
-		</p>
-		<button>Read more</button>
-	</li>
-	<li>
-		<h2>03</h2>
-		<h3>City Gate</h3>
-		<p>
-			But also the leap into electronic typesetting, remaining essentially 
-			unchanged. It was popularised in the 1960s.
-		</p>
-		<button>Read more</button>
-	</li>
-	<li>
-		<h2>04</h2>
-		<h3>Stadium Badminton court</h3>
-		<p>
-			etraset sheets containing Lorem Ipsum passages,  
-			and more  with desktopoftware like Aldus PageMaker 
-			including versions
-		</p>
-		<button>Read more</button>
-	</li>
-    <li>
-		<h2>05</h2>
-		<h3>Jabi Lake Badminton Club</h3>
-		<p>
-			ning Lorem Ipsum passages,  
-			and more desktop software like PageMaker 
-			including versions of Lorem Ipsum.
-		</p>
-		<button>Read more</button>
-	</li>
-    <li>
-		<h2>06</h2>
-		<h3>Package B Badminton Hall</h3>
-		<p>
-			With the release of Letraset sheets containing Lorem Ipsum passages, .
-		</p>
-		<button>Read more</button>
-	</li>
-</ul>
+<div class="Hero">
+	<table>
+		<thead>
+			<tr>
+				<th>Days</th>
+				<th>Time</th>
+				<th>Game</th>
+				<th>Tournament Type</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let people of data">
+				<td>{{people.day}}</td>
+				<td>{{people.time}}</td>
+				<td>{{people.game}}</td>
+				<td>{{people.tournament}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+

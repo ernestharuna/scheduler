@@ -1,4 +1,4 @@
-<!-- <div id="bounding-box">
+<div id="bounding-box">
     <div class="drag-box" cdkDrag cdkDragBoundary="#bounding-box" cdkDragLockAxis="x">
         Like, Share and comment!!!
         <div class="handle" cdkHandle>
@@ -6,40 +6,6 @@
         </div>
     </div>
 </div>
-
-
-<div style="width: 40%; margin: 0 auto; padding: 20px 0 20px 0;">
-        
-    <div 
-    cdkDropList
-    [cdkDropListConnectedTo]="['weekDays']"
-    (cdkDropListDropped)="onDrop($event)" 
-    [cdkDropListData]="newData" 
-    style="display: flex;"  
-    id="newData" >
-        <div class="drag-item" *ngFor="let month of newData">
-            <div cdkDrag>
-                {{month}}
-            </div>
-        </div>
-    </div>
-
-    <div 
-    cdkDropList 
-    [cdkDropListConnectedTo]="['newData']"
-    (cdkDropListDropped)="onDrop($event)" 
-    [cdkDropListData]="weekDays"              
-    cdkDropListOrientation="horizontal" 
-    id="weekDays" >
-        <div *ngFor="let day of weekDays" class="drag-item">
-            <div cdkDrag>
-                {{day}}
-                <img *cdkDragPreview src="/assets/ABCIN.png">
-            </div>
-        </div>
-    </div>
-
-</div> -->
 
 
 <!-- <div cdkDropListGroup>

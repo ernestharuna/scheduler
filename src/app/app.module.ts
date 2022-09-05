@@ -38,6 +38,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { MarqueeComponent } from './marquee/marquee.component';
 import { CardsComponent } from './cards/cards.component';
 import { ClubsComponent } from './clubs/clubs.component';
+import { PagesComponent } from './admin-layout/pages/pages.component';
+import { SettingsComponent } from './admin-layout/settings/settings.component';
 
 
 @NgModule({
@@ -68,7 +70,9 @@ import { ClubsComponent } from './clubs/clubs.component';
     SignUpComponent,
     MarqueeComponent,
     CardsComponent,
-    ClubsComponent
+    ClubsComponent,
+    PagesComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,38 +1,48 @@
 
-<div class="Hero">
-    <div class="container">
-        <div class="screen">
-            <div class="screen__content">
-                <form class="login">
-                    <div class="login__field">
-                        <i class="login__icon fas fa-user"></i>
-                        <input type="text" class="login__input" placeholder="User name / Email">
-                    </div>
-                    <div class="login__field">
-                        <i class="login__icon fas fa-lock"></i>
-                        <input type="password" class="login__input" placeholder="Password">
-                    </div>
-                    <button class="button login__submit">
-                        <span class="button__text">Log In Now</span>
-                        <i class="button__icon fas fa-chevron-right"></i>
-                    </button>				
-                </form>
-                <div class="social-login">
-                    <h3>log in via</h3>
-                    <div class="social-icons">
-                        <a href="#" class="my-3 text-white px-2"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="my-3 text-white px-2"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="my-3 text-white px-2"><i class="bi bi-whatsapp"></i></a>
-                        <a href="#" class="my-3 text-white px-2"><i class="bi bi-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="screen__background">
-                <span class="screen__background__shape screen__background__shape4"></span>
-                <span class="screen__background__shape screen__background__shape3"></span>		
-                <span class="screen__background__shape screen__background__shape2"></span>
-                <span class="screen__background__shape screen__background__shape1"></span>
-            </div>		
-        </div>
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
     </div>
-</div>
+    <form>
+        <h3>Sign Up</h3>
+
+        <label for="username">Club name</label>
+        <input type="text" placeholder="Enter Club Name" id="username">
+
+        <div style="display: grid; grid-template-columns: auto auto; grid-gap: 20px;">
+            <div>
+                <label for="username">Phone</label>
+                <input type="text" placeholder="Enter Phone" id="username">
+            </div>
+            <div>
+                <label for="username">Email Address</label>
+                <input type="text" placeholder="Enter Email" id="username"><i></i>
+            </div>
+        </div>
+
+        <label for="username">Number of Players</label>
+        <input type="text" placeholder="Enter Address" id="username">
+
+        <div style="display: grid; grid-template-columns: auto auto; grid-gap: 20px;">
+            <div>
+                <label for="username">City</label>
+                <input type="text" placeholder="Enter City" id="username">
+            </div>
+            <div>
+                <label for="username">State/Province</label>
+                <input type="text" placeholder="Enter Club Name" id="username"><i></i>
+            </div>
+        </div>
+
+        <label for="password">Postal Code / Zip Code</label>
+        <input type="password" placeholder="Password" id="password">
+
+        <button style="color: #198754;" routerLink="/super-admin/super-dashboard">Log In</button>
+       
+    </form>
