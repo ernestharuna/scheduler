@@ -33,16 +33,18 @@
     <div class="shape"></div>
     <div class="shape"></div>
 </div>
-<form>
+<form [formGroup]="loginDetails" (ngSubmit)="onClick()">
     <h3>Login Here</h3>
 
-    <label for="username">Username</label>
-    <input type="text" placeholder="Email or Phone" id="username">
+    <label for="name">Username</label>
+    <input type="text" placeholder="Name" id="username" formControlName="name">
+    <span *ngIf="name && name.invalid && name.touched" class="text-danger">Input field is invalid.</span>
+
 
     <label for="password">Password</label>
-    <input type="password" placeholder="Password" id="password">
+    <input type="password" placeholder="Password" id="password" formControlName="password">
 
-    <button style="color: #198754;" routerLink="/super-admin/super-dashboard">Log In</button>
+    <button style="color: #198754;" [disabled]="loginDetails.invalid">Log In</button>
     <p>Don't have an account ?
       <br>
       Sign up <a routerLink="sign-up">Here</a></p>

@@ -9,17 +9,20 @@
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form>
+    <form [formGroup]="abcinLogin" (ngSubmit)="onSubmit()">
         <h3>Login Here</h3>
 
-        <label for="username">Username</label>
-        <input type="text" placeholder="Email or Phone" id="username">
+        <label for="Any">Club Code</label>
+        <input type="text" placeholder="Club Code" id="name" formControlName="name">
+        <span *ngIf="name && name.invalid && name.touched" class="text-danger">Input field is invalid.</span>
 
         <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password">
+        <input type="password" placeholder="Password" id="password" formControlName="password"> 
+        <span *ngIf="password && password.invalid && password.touched" class="text-danger">Input field is invalid.</span>
 
-        <button style="color: #198754;" routerLink="/super-admin/super-dashboard">Log In</button>
-        <p style="font-size: 12px; padding-top: 20px;">Don't have an account ?
+        <button style="color: #198754;" [disabled]="abcinLogin.invalid" routerLink="/super-admin/super-dashboard" >Log In</button>
+   
+        <p style="font-size: 12px; padding-top: 20px;">Don't have an account?
           <br>
           Sign up <a routerLink="/sign-up">Here</a></p>
         <div class="social">

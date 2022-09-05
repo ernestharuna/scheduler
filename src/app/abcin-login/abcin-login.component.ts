@@ -7,21 +7,29 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./abcin-login.component.css']
 })
 export class AbcinLoginComponent implements OnInit {
-    abcinLogin = new FormGroup({
-      firstName : new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(30)]),
-      lastName : new FormControl('', [Validators.required, Validators.email]),
-      newValue : new FormControl('', [Validators.required])
-    });
 
-    public LoginForm: FormGroup | undefined
+  abcinLogin = new FormGroup({
+      name : new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(30)]),
+      password : new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(30)]),
+    })
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-onSubmit(){
-  console.warn(this.abcinLogin.value);
-}
+  onSubmit(){
+    console.warn(this.abcinLogin.value);
+  }
+
+  get name(){
+    return this.abcinLogin.get('name');
+  }
+
+  get password(){
+    return this.abcinLogin.get('password');
+  }
 
 }
+
+

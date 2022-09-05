@@ -8,17 +8,24 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginPageComponent implements OnInit {
   
-  exForm = new FormGroup({
-    email : new FormControl('', [Validators.required, Validators.email]),
+  loginDetails = new FormGroup({
+    name : new FormControl('', [Validators.required, Validators.email]),
     password : new FormControl('',[Validators.required, Validators.minLength(3)])
-  });
-
+  })
   
   ngOnInit(): void {
 
   }
 
   constructor() { }
+
+  onClick(){
+    console.warn(this.loginDetails.value);
+  }
+
+  get name(){
+    return this.loginDetails.get('name');
+  }
 
 }
 

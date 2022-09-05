@@ -1,10 +1,36 @@
+.marquee{
+    display: flex; 
+    padding-left: 100px;
+}
+
+.marquee > p{
+    padding-left: 50px;
+}
+
 .blink {
     /* animation: blinker 5s linear infinite; */
     color: #fff;
     background: #198754;
     font-family: sans-serif;
-    padding: 30px;
+    padding: 19px;
     font-size: 15px;
+    text-align: center;
+}
+
+.liveView{
+    width: 150px;
+    height: 70px;
+    padding: 20px;
+    background: #ffff00;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    text-align: center;
+}
+
+h1{
+    font-size: 30px;
+    color: #198754;
 }
 /* 
 @keyframes blinker {
